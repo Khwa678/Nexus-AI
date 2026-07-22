@@ -1,0 +1,142 @@
+{
+  "chats": [
+    {
+      "id": "chat-1",
+      "title": "Workspace Onboarding Chat",
+      "isPinned": true,
+      "timestamp": 1784697114340,
+      "messages": [
+        {
+          "id": "msg-1",
+          "role": "system",
+          "content": "You are the NexusAI Core Planner Agent.",
+          "timestamp": 1784697114340
+        },
+        {
+          "id": "msg-2",
+          "role": "model",
+          "content": "Welcome to **NexusAI**! I am your central **Planner Agent**. I can help you orchestrate research reports, analyze resumes, write code snippets, or automate workflows between other agents in your workspace. How can I assist you today?",
+          "timestamp": 1784697124340
+        }
+      ]
+    }
+  ],
+  "tasks": [
+    {
+      "id": "task-1",
+      "title": "Integrate ElevenLabs Conversational Voice Agent",
+      "description": "Connect the workspace to the official ElevenLabs voice mode using agent_5801ky0g9czef2t8mj8qrwhpq1w.",
+      "status": "in_progress",
+      "priority": "high",
+      "assignee": "Voice Agent",
+      "dueDate": "2026-07-25"
+    },
+    {
+      "id": "task-2",
+      "title": "Automate ATS Resume Screening Pipeline",
+      "description": "Configure an automation workflow: When a document is added, trigger Resume Agent matching analysis.",
+      "status": "todo",
+      "priority": "medium",
+      "assignee": "Resume Agent",
+      "dueDate": "2026-07-30"
+    },
+    {
+      "id": "task-3",
+      "title": "Prepare Q3 Market Intelligence Brief",
+      "description": "Generate a deep citation-backed research report using the Web Search Grounding agent.",
+      "status": "done",
+      "priority": "high",
+      "assignee": "Research Agent",
+      "dueDate": "2026-07-20"
+    }
+  ],
+  "documents": [
+    {
+      "id": "doc-1",
+      "name": "nexusai_overview.txt",
+      "size": "1.2 KB",
+      "content": "NexusAI is an intelligent multi-agent SaaS application. It includes agents like Planner Agent, Research Agent, Resume Agent, Code Agent, and Voice Agent. It uses Gemini 3.6-flash and ElevenLabs for voice.",
+      "timestamp": 1784690714340
+    }
+  ],
+  "voiceSessions": [],
+  "automations": [
+    {
+      "id": "auto-1",
+      "name": "Deep Academic Research & Summary Workflow",
+      "trigger": "New Topic Entered",
+      "action": "Planner -> Research Agent -> Writing Agent summary writeup",
+      "active": true,
+      "lastRun": 1784698914340
+    },
+    {
+      "id": "auto-2",
+      "name": "Voice Session Transcription Archiving",
+      "trigger": "Voice Session Completed",
+      "action": "Voice Agent -> Memory Agent vector store indexing",
+      "active": false
+    }
+  ],
+  "agents": [
+    {
+      "id": "agent-planner",
+      "name": "Planner Agent",
+      "description": "Orchestrates multi-agent pipelines, schedules tasks, and helps manage your workspace workspace.",
+      "avatar": "CalendarRange",
+      "capabilities": [
+        "Task Planning",
+        "Agent Orchestration",
+        "Query Routing"
+      ],
+      "memoryCount": 14
+    },
+    {
+      "id": "agent-research",
+      "name": "Research Agent",
+      "description": "Performs web-search-grounded intelligence gathers, extracts citations, and exports formatted PDF reports.",
+      "avatar": "Globe",
+      "capabilities": [
+        "Live Web Search",
+        "Citation Extraction",
+        "PDF/Markdown Generation"
+      ],
+      "memoryCount": 32
+    },
+    {
+      "id": "agent-resume",
+      "name": "Resume Agent",
+      "description": "ATS scanner that evaluates role-matching keywords, suggests phrasing, and formulates interview questions.",
+      "avatar": "FileSpreadsheet",
+      "capabilities": [
+        "ATS Scoring",
+        "Keyword Gap Analysis",
+        "Interview Q&A"
+      ],
+      "memoryCount": 8
+    },
+    {
+      "id": "agent-code",
+      "name": "Code Agent",
+      "description": "Assists with writing, explaining, refactoring, and debugging full-stack code blocks.",
+      "avatar": "CodeXml",
+      "capabilities": [
+        "Code Generation",
+        "Bug Tracing",
+        "Optimization Review"
+      ],
+      "memoryCount": 45
+    },
+    {
+      "id": "agent-voice",
+      "name": "Voice Agent",
+      "description": "Fidelity verbal companion handling natural conversational dialogue and transcript logging.",
+      "avatar": "Mic",
+      "capabilities": [
+        "Streaming Voice",
+        "Speech-to-Text Logs",
+        "Adaptive Pacing"
+      ],
+      "memoryCount": 19
+    }
+  ]
+}
